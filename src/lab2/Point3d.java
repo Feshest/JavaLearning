@@ -7,7 +7,7 @@ public class Point3d {
 
     public Point3d(double x, double y, double z){
         xCoord = x;
-        yCoord = y;
+        yCoord = y;  //Конструктор
         zCoord = z;
     }
 
@@ -18,26 +18,25 @@ public class Point3d {
     public double getX(){
         return xCoord;
     }
-
     public double getY(){
         return yCoord;
-    }
+    }  // Getters
     public double getZ() {
         return zCoord;
     }
+
     public void setX(double value){
         xCoord = value;
     }
-
     public void setY(double value){
         yCoord = value;
-    }
+    }  //Setters
     public void setZ(double value) {
         zCoord = value;
     }
 
     public static boolean isSamePoints(Point3d cord1, Point3d cord2){
-        double[] cord_list1 = new double[]{cord1.getX(), cord1.getY(),cord1.getZ()};
+        double[] cord_list1 = new double[]{cord1.getX(), cord1.getY(),cord1.getZ()};    // Метод, сравнивающий координаты двух точек
         double[] cord_list2 = new double[]{cord2.getX(),cord2.getY(),cord2.getZ()};
         if(cord_list1[0] == cord_list2[0] && cord_list1[1] == cord_list2[1] && cord_list1[2] == cord_list2[2]){
             return true;
@@ -46,7 +45,7 @@ public class Point3d {
     }
      public static double distanceTo(Point3d cord1, Point3d cord2){
         if(Point3d.isSamePoints(cord1,cord2) != true){
-            double[] cord_list1 = new double[]{cord1.getX(), cord1.getY(), cord1.getZ()};
+            double[] cord_list1 = new double[]{cord1.getX(), cord1.getY(), cord1.getZ()};  //Метод, вычисляющий расстояние между точками
             double[] cord_list2 = new double[]{cord2.getX(), cord2.getY(), cord2.getZ()};
 
             double distance = Math.sqrt(
